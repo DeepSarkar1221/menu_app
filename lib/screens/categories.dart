@@ -21,15 +21,19 @@ class CategoriesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Menu Categories")),
+      appBar: AppBar(title: Text("Menu Categories"),
+      ),
       backgroundColor: const Color.fromARGB(255, 179, 228, 207),
+      
       body: GridView(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 20,
           childAspectRatio: 1.5,
           mainAxisSpacing: 20,
+
         ),
+        padding: const EdgeInsets.fromLTRB(10, 16, 10, 0),    
         children: [
           for (final category in availableCategories)
             CategoryGridItem(
